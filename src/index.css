@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:serif;
+
+}
+
+:root {
+    --bg-color: #081b29;
+    --main-color: #08b3f7;
+}
+
+
+/* home section */
+
+.home {
+    
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    z-index: 1;
+    transition: .5s;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(85, 84, 96);
+    z-index: -1;
+    transition: .5s;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.social a {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 50%;
+
+}
+
+.social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.social a:hover::before {
+    width: 100%;
+}
+
+
+/* animation */
+
+.text-animation {
+    position: relative;
+    display: inline; 
+}
+
+.text-animation h2 {
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.text-animation h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;;
+    animation-delay: 2s;
+
+}
+
+/* keyframes animation */
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -40rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+/* about section */
+#about img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#about .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    border-top: .2rem solid black;
+    border-bottom: .2rem solid black;
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+
+    animation: aboutSpinner 8s linear infinite;
+
+
+}
+
+@keyframes aboutSpinner {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* about section */
+
+
+/* skill section */
+.bar {
+    height: 1rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid var(--main-color);
+    padding: 0.1rem;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    border-radius: .2rem;
+    background: var(--main-color);
+}
+
+/* footer */
+
+
+.footer a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.alpha {
+    border-radius: .6rem;
+
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.footer a:hover::before {
+    width: 100%;
+}
+
+img{
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+.contact textarea{
+    
+    outline:0;
+    border-bottom: 1px solid #0d0b0b;
+    background: transparent;
+    resize :none;
+ 
+    
+}
+
+/* theme converter */
+
+.theme{
+    position: absolute;
+    cursor: pointer;
+}
+
+#hide{
+    visibility: hidden;
+}
+
+
+
+
+
