@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Travelling from './pages/Travelling';
+import Friends from './pages/Friends';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/travelling' element={<Travelling />} />
+          <Route path='/friends' element={<Friends />} />
         </Routes>
       </BrowserRouter>
 

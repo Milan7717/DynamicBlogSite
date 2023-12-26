@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 const RecentCard = (props) => {
+    
     return (
         <>
+            
             <div className="flex sm:items-center sm:justify-center ">
                 <div className=" grid items-center justify-center  md:grid-cols-2 md:gap-5 gap-2  sm:w-[80%]">
 

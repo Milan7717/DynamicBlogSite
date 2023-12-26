@@ -1,25 +1,31 @@
-import React from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import Blogcard from '../component/common/Blogcard'
 import image1 from "../assets/react.svg";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const sampleDataFromApi = [
-    {
-        heading: "Heading first",
-        description: "Desc first"
-    },
-    {
-        heading: "Heading second",
-        description: "Desc second"
-    },
-    {
-        heading: "Heading third",
-        description: "Desc third"
-    },
 
-]
+
 const Blog = (props) => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/blogcard/');
+                setData(response.data);
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
     return (
         <>
             <div>
@@ -39,12 +45,22 @@ const Blog = (props) => {
 
                             {/* map foreach */}
 
-                            {sampleDataFromApi.map((singleData, index) => {
+                            {/* {sampleDataFromApi.map((singleData, index) => {
                                 return (
-                                    <Blogcard key={index} heading={singleData.heading} description={singleData.description} imagegallery={image1} />
+                                    <Blogcard key={index} link={singleData.link}  heading={singleData.heading} description={singleData.description} imagegallery={image1} />
                                 )
-                            })}
+                            })} */}
                             {/* here end */}
+
+                            {data.map((blogData, index) => (
+                                <Blogcard
+                                    key={index}
+                                    link={blogData.link}
+                                    heading={blogData.heading}
+                                    description={blogData.description}
+                                    imagegallery={blogData.image}
+                                />
+                            ))}
 
 
 

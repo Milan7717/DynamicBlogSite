@@ -8,25 +8,26 @@ const ImageCarousel = (props) => {
         <>
             {/* <!-- ---------------carousel------------- --> */}
 
-            <div id={props.id} className="relative" data-carousel="slide">
+            <div id="travelling-carousel" className="relative" data-carousel="slide">
                 {/* <!-- Carousel wrapper --> */}
                 <div className="relative h-56 lg:h-[692px] overflow-hidden rounded-lg sm:h-96">
-
+                    
+                    
                     {/* <!-- Item 1 --> */}
-
-                    <div className=" duration-700 ease-in-out" data-carousel-item>
+                    <div className=" duration-100 ease-in-out" data-carousel-item>
                         <img src={props.imagegallery1}
                             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover lg:h-[692px] sm:h-96 h-56"
                             alt="..." />
                     </div>
 
-                    {/* <!-- Item 2 --> */}
 
+                    {/* <!-- Item 2 --> */}
                     <div className=" duration-700 ease-in-out" data-carousel-item>
                         <img src={props.imagegallery2}
                             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover lg:h-[692px] sm:h-96 h-56"
                             alt="..." />
                     </div>
+
                     {/* <!-- Item 3 --> */}
                     <div className=" duration-700 ease-in-out" data-carousel-item>
                         <img src={props.imagegallery3}
@@ -35,7 +36,6 @@ const ImageCarousel = (props) => {
                     </div>
 
                 </div>
-
                 {/* <!-- Slider indicators --> */}
                 <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
                     <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
@@ -45,7 +45,6 @@ const ImageCarousel = (props) => {
                     <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
                         data-carousel-slide-to="2"></button>
                 </div>
-
                 {/* <!-- Slider controls --> */}
                 <button type="button"
                     className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
@@ -72,6 +71,7 @@ const ImageCarousel = (props) => {
                     </span>
                 </button>
             </div>
+
         </>
 
     )

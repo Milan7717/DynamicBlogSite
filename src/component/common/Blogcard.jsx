@@ -34,7 +34,9 @@ const Blogcard = (props) => {
             <div className="p-5">
                 <h1 className="text-center mb-2 text-xl md:text-2xl underline font-semibold ">{props.heading}</h1>
                 <p className="text-justify text-lg md:text-xl ">{props.description}</p>
-                <a href="/travelling"><button type="button"
+                {/* <a href={props.link}> */}
+                <a href="/friends">
+                    <button type="button"
                     className="btn mr-4 bg-blue-400 p-1 border-2 border-sky-400 text-lg sm:text-xl rounded-lg p-2 my-4">See
                     More</button></a>
 

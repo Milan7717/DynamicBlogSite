@@ -6,7 +6,7 @@ import image2 from "../assets/images/blogimg.jpeg"
 const sampleDataFromApi = [
     {
         description: "Desc first",
-        link: "https://www.facebook.com"
+        link: "/travelling"
     },
     {
         description: "Desc second",
