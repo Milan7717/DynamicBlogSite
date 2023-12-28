@@ -103,7 +103,6 @@ const Travelling = (props) => {
                                     heading={blogdetailData.heading}
                                     longdescription={blogdetailData.long_description}
                                     imagegallery={blogdetailData.image}
-
                                 />
                             ))}
                        
@@ -122,15 +121,13 @@ const Travelling = (props) => {
                                             heading={aboutblogData.heading}
                                             shortdescription={aboutblogData.short_description}
                                             imagegallery={aboutblogData.image}
-                                        />
-                                        
+                                        />  
                                     ))}
 
                                     {aboutblogdata.map((aboutblogData, index) => (
                                         <Imagecard
                                             key={index}
                                             link={aboutblogData.link}
-                                            
                                             imagegallery1={aboutblogData.image}
                                             imagegallery2={aboutblogData.image}
                                             imagegallery3={aboutblogData.image}

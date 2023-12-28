@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Blogcard = (props) => {
     return (
@@ -35,10 +36,10 @@ const Blogcard = (props) => {
                 <h1 className="text-center mb-2 text-xl md:text-2xl underline font-semibold ">{props.heading}</h1>
                 <p className="text-justify text-lg md:text-xl ">{props.description}</p>
                 {/* <a href={props.link}> */}
-                <a href="/friends">
+                <Link to={"/blog/" + props.id}>
                     <button type="button"
-                    className="btn mr-4 bg-blue-400 p-1 border-2 border-sky-400 text-lg sm:text-xl rounded-lg p-2 my-4">See
-                    More</button></a>
+                        className="btn mr-4 bg-blue-400 p-1 border-2 border-sky-400 text-lg sm:text-xl rounded-lg p-2 my-4">See
+                        More</button></Link>
 
             </div>
         </div>

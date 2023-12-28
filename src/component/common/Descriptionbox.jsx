@@ -23,10 +23,10 @@ const Descriptionbox = (props) => {
 
                     <img src={props.imagegallery} onClick={() => setOpen(true)} alt="" className="w-[100%]  object-cover rounded-lg" />
 
-                    <CustomModal  open={open} setOpen={setOpen} imagegallery={props.imagegallery}/>
+                    <CustomModal open={open} setOpen={setOpen} imagegallery={props.imagegallery} />
                 </div>
 
-              
+
 
 
 

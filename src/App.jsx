@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Travelling from './pages/Travelling';
 import Friends from './pages/Friends';
+import BlogDetail from './pages/BlogDetail';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:id' element={<BlogDetail />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/travelling' element={<Travelling />} />

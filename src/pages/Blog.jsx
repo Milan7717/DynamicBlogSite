@@ -16,6 +16,7 @@ const Blog = (props) => {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/blogcard/');
                 setData(response.data);
+                console.log(response.data);
 
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -55,10 +56,11 @@ const Blog = (props) => {
                             {data.map((blogData, index) => (
                                 <Blogcard
                                     key={index}
-                                    link={blogData.link}
+                                    // link={blogData.link}
                                     heading={blogData.heading}
                                     description={blogData.description}
                                     imagegallery={blogData.image}
+                                    id={blogData.id}
                                 />
                             ))}
 
