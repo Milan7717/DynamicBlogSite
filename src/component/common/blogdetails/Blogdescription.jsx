@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Longdescription = (props) => {
+const Blogdescription = (props) => {
     return (
         <>
             <h1 className="text-center font-bold text-2xl mt-3 mb-6 md:text-4xl underline">{props.heading}</h1>
@@ -13,4 +13,4 @@ const Longdescription = (props) => {
     )
 }
 
-export default Longdescription
+export default Blogdescription

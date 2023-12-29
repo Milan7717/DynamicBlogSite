@@ -1,7 +1,7 @@
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import Blogcard from '../component/common/Blogcard'
-import image1 from "../assets/react.svg";
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
