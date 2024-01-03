@@ -77,28 +77,25 @@ const Home = (props) => {
             <div>
                 <Navbar />
             </div>
-            <div>
-
-                <div className="min-h-[692px] bg-cover flex justify-center flex-col"
-                    style={{ backgroundPosition: "40% 30%", background:homeData.image }}>
+            {homeData.map((homepageData, index) => {
+                return (
 
 
+                    <div className="min-h-[692px] bg-cover flex justify-center flex-col"
+                        style={{ backgroundPosition: "40% 30%", background: homeData.image }}>
 
-                    <div className="mt-52 sm:mt-32 lg:mx-16 lg:mt-56  bg-black bg-opacity-30 shadow-2xl">
-                        <h1
-                            className="p-2 mb-2 sm:mb-4 text-2xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl  text-center mt-2 ">
-                            Welcome to My World: So Glad You've Arrived.</h1>
-                        {homeData.map((homepageData, index) => {
-                            return (
-                                <p className="indent-12 text-justify text-lg font-semibold text-white sm:p-4 p-2 md\:text-xl lg:text-3xl xl:px-16 ">
-                                    {homepageData.description} </p>
-                            )
-                        })}
+                        <div className="mt-52 sm:mt-32 lg:mx-16 lg:mt-56  bg-black bg-opacity-30 shadow-2xl">
+                            <h1
+                                className="p-2 mb-2 sm:mb-4 text-2xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl  text-center mt-2 ">
+                                Welcome to My World: So Glad You've Arrived.</h1>
+                            <p className="indent-12 text-justify text-lg font-semibold text-white sm:p-4 p-2 md\:text-xl lg:text-3xl xl:px-16 ">
+                                {homepageData.description} </p>
 
-
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                )
+            })}
             <div>
                 <div className=" lg:mx-24 md:mx-10 sm:mx-8">
 

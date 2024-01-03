@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import axios from 'axios'
-import Popup from '../component/common/Popup';
+
 
 const Contact = () => {
     const [isMessageSent, setIsMessageSent] = useState(false);
@@ -26,9 +26,12 @@ const Contact = () => {
             console.log('Contact form submitted successfully!');
             // Display a success message
             setIsMessageSent(true);
+           
             setTimeout(() => {
+                window.alert('Your message is successfully sent');
                 window.location.reload();
-            }, 2000);
+            }, 100);
+            
 
         } catch (error) {
             // Handle error (e.g., show an error message)
@@ -78,9 +81,9 @@ const Contact = () => {
                 </div>
             )}
 
-            {isMessageSent && (
+            {/* {isMessageSent && (
                 <Popup message="Contact done" />
-            )}
+            )} */}
 
             <Footer />
         </>

@@ -55,11 +55,73 @@ const Mainportfolio = (props) => {
                     <div className="my-6 mx-2">
                         <h1 className="font-bold text-xl md:text-3xl my-1 text-center">Frontend Developer</h1>
                         <p>{props.aboutMeDescription}</p>
-                        
+
                     </div>
 
                 </div>
             </div>
+
+            {/* <!-- education section --> */}
+            <div id="education" className="lg:mt-24 md:mt-18 sm:mt-14 mt-10">
+                <h1 className="text-center md:text-3xl text-2xl font-bold my-10">My <span className="text-blue-400">Journey</span> </h1>
+                <div className=" mx-2">
+                    <h1 className="font-bold md:text-xl text-lg my-2">Education</h1>
+                    <div className=" mt-4 mb-6">
+                        <div className="content mb-6 border-2 border-sky-400 p-2 rounded-lg">
+                            <p> <span className="font-semibold text-lg"> School</span> - {props.schoolName}</p>
+                            <i className="fa-regular fa-calendar"></i> <span className="ml-2 text-blue-400">{props.joindate}-{props.enddate}</span>
+                            <p className="my-1 md:my-2">{props.educationDescription}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {/* skill section */}
+            <div className="text-center lg:mt-24 md:mt-18 sm:mt-14 mt-10">
+                <h1 className="text-center md:text-3xl text-2xl font-bold my-10">My <span className="text-blue-400"> Skills</span></h1>
+                {/* <!-- animation --> */}
+                {/* <div className="flex justify-center ">
+                            <div id="animContainer" className=" md:w-[40%] w-[50%] my-4">acdvdj</div>
+                        </div> */}
+
+                <div className="flex flex-wrap justify-between gap-4  mx-2">
+                    <div className="border-2 border-sky-400 md:w-[48%] w-[100%] p-4 rounded-lg">
+                        <h1 className="font-bold text-xl">Coding Skills</h1>
+                        <div className="my-2">
+                            <div className="flex justify-between">
+                                <p>{props.codingHeading}</p>
+
+                            </div>
+                            <div className=" my-1"><span className="w-[90%]"> <p>{props.codingExperienceDescription}</p></span></div>
+
+                        </div>
+
+                    </div>
+                    <div className="border-2 border-sky-400 md:w-[48%]  w-[100%] p-4 rounded-lg">
+                        <h1 className="font-bold text-xl">Professional Skills</h1>
+                        <div className="my-2">
+                            <div className="flex justify-between">
+                                <p>{props.professionalHeading}</p>
+
+                            </div>
+                            <div className=" my-1"><span className="w-[90%]"> <p>{props.professionalExperienceDescription}</p></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/* project section */}
+            
+            <div className="project lg:mt-24 md:mt-18 sm:mt-14 mt-10 mx-2">
+                <h1 className="text-center md:text-3xl text-2xl font-bold my-10">My <span className="text-blue-400"> Project</span></h1>
+                <div className="content mb-6 border-2 border-sky-400 px-3 p-2 rounded-lg">
+                    <span className="font-semibold text-xl">{props.projectHeading}</span>
+                    <p className="my-2">{props.projectDescription}</p>
+                </div>
+
+            </div>
+
         </>
     )
 }

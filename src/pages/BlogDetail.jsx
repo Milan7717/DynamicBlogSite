@@ -4,11 +4,11 @@ import { useParams } from 'react-router-dom'
 
 
 import Navbar from '../component/Navbar';
-import image1 from "../assets/rr.svg";
-import image2 from "../assets/react.svg";
 import Blogdescription from '../component/common/blogdetails/Blogdescription';
-import ImageCarousel from '../component/common/blogdetails/ImageCarousel';
 import Aboutblog from '../component/common/blogdetails/Aboutblog';
+// import image1 from "../assets/rr.svg";
+// import image2 from "../assets/react.svg";
+// import ImageCarousel from '../component/common/blogdetails/ImageCarousel';
 // import Aboutblog from '../component/common/blogdetails/Aboutblog';
 
 
@@ -38,7 +38,7 @@ const BlogDetail = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/aboutblog/');
-                setBlogData(response.data.filter((each, index) => each.id == id));
+                setBlogData(response.data.filter((each, index) => each.blogDetails_id== id));
                 
 
             } catch (error) {
@@ -57,7 +57,7 @@ const BlogDetail = () => {
             </div>
             <div>
                 <div>
-                    <ImageCarousel id="travelling-carousel" imagegallery1={image1} imagegallery2={image2} imagegallery3={image1} />
+                    {/* <ImageCarousel id="travelling-carousel" imagegallery1={image1} imagegallery2={image2} imagegallery3={image1} /> */}
                 </div>
 
                 <div className="lg:mx-4 md:mx-10 sm:mx-8 my-4">

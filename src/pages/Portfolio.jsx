@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
 import Mainportfolio from '../component/common/porfolio/Mainportfolio'
-import AcademicJourney from '../component/common/porfolio/AcademicJourney'
-import SkillSetion from '../component/common/porfolio/SkillSetion'
-import Project from '../component/common/porfolio/Project'
+// import AcademicJourney from '../component/common/porfolio/AcademicJourney'
+// import SkillSetion from '../component/common/porfolio/SkillSetion'
+// import Project from '../component/common/porfolio/Project'
 import axios from 'axios';
 
 
@@ -27,51 +27,51 @@ const Portfolio = (props) => {
     }, []);
 
 
-    const [academicData, setAcademicData] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/education/');
-                setAcademicData(response.data);
+    // const [academicData, setAcademicData] = useState([]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axios.get('http://127.0.0.1:8000/api/education/');
+    //             setAcademicData(response.data);
 
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
 
-        fetchData();
+    //     fetchData();
 
-    }, []);
-    const [projectData, setProjectData] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/project/');
-                setProjectData(response.data);
+    // }, []);
+    // const [projectData, setProjectData] = useState([]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axios.get('http://127.0.0.1:8000/api/project/');
+    //             setProjectData(response.data);
 
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
 
-        fetchData();
+    //     fetchData();
 
-    }, []);
-    const [skillData, setSkillData] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/skill/');
-                setSkillData(response.data);
+    // }, []);
+    // const [skillData, setSkillData] = useState([]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axios.get('http://127.0.0.1:8000/api/skill/');
+    //             setSkillData(response.data);
 
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
 
-        fetchData();
+    //     fetchData();
 
-    }, []);
+    // }, []);
     return (
         <>
             <div>
@@ -92,12 +92,26 @@ const Portfolio = (props) => {
                             aboutMeDescription={setportfolioData.aboutme_description}
                             aboutMeImage={setportfolioData.aboutme_image}
 
+                            schoolName={setportfolioData.school_name}
+                            joindate={setportfolioData.joindate}
+                            enddate={setportfolioData.enddate}
+                            educationDescription={setportfolioData.education_description}
+
+                            codingHeading={setportfolioData.coding_heading}
+                            codingExperienceDescription={setportfolioData.codingexperience_description}
+
+                            professionalHeading={setportfolioData.professional_heading}
+                            professionalExperienceDescription={setportfolioData.professionalexperience_description}
+
+                            projectHeading={setportfolioData.project_heading}
+                            projectDescription={setportfolioData.project_description}
 
                         />
                     ))}
+
                     {/* <!-- education section --> */}
 
-                    {academicData.map((setAcademicData, index) => (
+                    {/* {academicData.map((setAcademicData, index) => (
 
                         <AcademicJourney
 
@@ -107,12 +121,20 @@ const Portfolio = (props) => {
                             enddate={setAcademicData.enddate}
                             educationDescription={setAcademicData.education_description}
 
+                            codingHeading={setSkillData.coding_heading}
+                            codingExperienceDescription={setSkillData.codingexperience_description}
+
+                            professionalHeading={setSkillData.professional_heading}
+                            professionalExperienceDescription={setSkillData.professionalexperience_description}
+
+                            projectHeading={setProjectData.project_heading}
+                        projectDescription={setProjectData.project_description}
                         />
-                    ))}
+                    ))} */}
 
                     {/* <!-- skills --> */}
 
-                    {skillData.map((setSkillData, index) => (
+                    {/* {skillData.map((setSkillData, index) => (
 
                         <SkillSetion
                             key={index}
@@ -124,18 +146,18 @@ const Portfolio = (props) => {
 
 
                         />
-                    ))}
+                    ))} */}
 
 
 
                     {/* <!-- project --> */}
-                    {projectData.map((setProjectData, index) => (
+                    {/* {projectData.map((setProjectData, index) => (
                         <Project 
                         key={index}
                         projectHeading={setProjectData.project_heading}
                         projectDescription={setProjectData.project_description}
                         />
-                    ))}
+                    ))} */}
 
 
 
